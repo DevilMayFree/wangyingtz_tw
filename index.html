@@ -400,10 +400,13 @@
           </div>
           <button>關閉</button>
         </div> -->
-        <div id="notification" class="notification">
+        <div id="notification" class="notification" style="height: 15rem;">
           <div class="notification-content">
-            <div class="message">
+            <!--<div class="message">
               「本公司近日獲悉，有不法人士冒用我們名義進行詐騙活動。我們在此重申，公司未曾發起任何形式的投資會員招募，亦不會透過非官方渠道要求客戶提供個人資料或進行任何交易。若您遇到任何冒名廣告或接收到可疑聯繫，請立即聯繫我們的客服專線（02-87221666）與我們聯絡，感謝您的警覺與合作。」
+            </div>-->
+            <div class="notification-content">
+              我是台日，我的大号掉了，现在换成，@Taiwan288 看到速速跟我联系
             </div>
             <button id="closeNotification" class="close-btn">關閉</button>
           </div>
@@ -421,9 +424,11 @@
           const today = new Date().toLocaleDateString();
           const notificationClosed = localStorage.getItem("notificationClosed");
 
-          if (notificationClosed !== today) {
-            document.getElementById("notification").style.display = "block";
-          }
+          // if (notificationClosed !== today) {
+          //   document.getElementById("notification").style.display = "block";
+          // }
+
+          document.getElementById("notification").style.display = "block";
         }
 
         // 設置關閉通知欄的功能並記錄到 localStorage
@@ -436,7 +441,7 @@
           });
 
         // 頁面加載時檢查通知欄是否應該顯示
-        // checkNotification();
+        checkNotification();
       });
     </script>
     <!--<script src="//event.franklin.com.tw/js/ft.ga.addon.js"></script>-->
